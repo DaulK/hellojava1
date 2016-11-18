@@ -55,30 +55,6 @@ public class calculatorMain {
 			return false;
 		}
 	}
-	public static void calculation(int [] num, char sign) {
-		long result;
-		double result2 = 0.0;
-		switch(sign){
-		case '+' :
-			result = (long)num[0] + (long)num[1];
-			System.out.println(result);
-			break;
-		case '-' :
-			result = (long)num[0] - (long)num[1];
-			System.out.println(result);
-			break;
-		case '*' :
-			result = (long)num[0] * (long)num[1];
-			System.out.println(result);
-			break;
-		case '/' :
-			result2 = (double)num[0] / (double)num[1];
-			System.out.println(result2);
-			break;
-		default:
-			break;
-		}
-	}
 	
 	public static void main(String[] args) {
 		
@@ -115,7 +91,28 @@ public class calculatorMain {
 			if(blockDivideByZero(num[1], sign)) continue;    //반환값이 true이면 continue
 					
 			//연산결과 코드 블록
-			long result = calculation(num[], sign);
+			long result;
+			double result2 = 0.0;
+			switch(sign){
+			case '+' :
+				result = (long)num[0] + (long)num[1];
+				System.out.println(result);
+				break;
+			case '-' :
+				result = (long)num[0] - (long)num[1];
+				System.out.println(result);
+				break;
+			case '*' :
+				result = (long)num[0] * (long)num[1];
+				System.out.println(result);
+				break;
+			case '/' :
+				result2 = (double)num[0] / (double)num[1];
+				System.out.println(result2);
+				break;
+			default:
+				break;
+			}
 			
 			System.out.println("yes(y) or no(n)");
 			inputVal = scan.nextLine();
